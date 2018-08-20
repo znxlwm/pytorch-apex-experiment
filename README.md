@@ -38,15 +38,18 @@ The following shows basic folder structure.
 ## Resutls
 <table align='center'>
 <tr align='center'>
-  <td> </td>
-  <td> </td>
+  <td rowspan="2"> GPU - Method </td>
+  <td rowspan="2"> Metric </td>
+  <td colspan="5"> Batch size </td>
+</tr>
+<tr align='center'>
   <td> 128 </td>
   <td> 256 </td>
   <td> 512 </td>
   <td> 1024 </td>
   <td> 2048 </td>
 </tr>
-<tr>
+<tr align='center'>
   <td rowspan="3"> 1080 Ti - FP32 </td>
   <td> Accuracy (%) </td>
   <td> 40.92 ± 2.08 </td>
@@ -55,7 +58,7 @@ The following shows basic folder structure.
   <td> 64.79 ± 1.56 </td>
   <td> 63.44 ± 1.76 </td>
 </tr>
-<tr>
+<tr align='center'>
   <td> Time (sec) </td>
   <td> 5.16 ± 0.73 </td>
   <td> 9.12 ± 1.20 </td>
@@ -63,7 +66,7 @@ The following shows basic folder structure.
   <td> 32.23 ± 3.23 </td>
   <td> 63.42 ± 4.89 </td>
 </tr>
-<tr>
+<tr align='center'>
   <td> Memory (Mb) </td>
   <td> 1557.00 ± 0.00 </td>
   <td> 2053.00 ± 0.00 </td>
@@ -71,7 +74,7 @@ The following shows basic folder structure.
   <td> 4995.00 ± 0.00 </td>
   <td> 8763.00 ± 0.00 </td>
 </tr>
-<tr>
+<tr align='center'>
   <td rowspan="3"> 1080 Ti - FP16 </td>
   <td> Accuracy (%) </td>
   <td> 43.35 ± 2.04 </td>
@@ -80,7 +83,7 @@ The following shows basic folder structure.
   <td> 63.79 ± 3.95 </td>
   <td> 62.64 ± 1.91 </td>
 </tr>
-<tr>
+<tr align='center'>
   <td> Time (sec) </td>
   <td> 5.42 ± 0.71 </td>
   <td> 9.11 ± 1.14 </td>
@@ -88,7 +91,7 @@ The following shows basic folder structure.
   <td> 31.49 ± 3.01 </td>
   <td> 61.79 ± 5.15 </td>
 </tr>
-<tr>
+<tr align='center'>
   <td> Memory (Mb) </td>
   <td> 1405.00 ± 0.00 </td>
   <td> 1745.00 ± 0.00 </td>
@@ -96,7 +99,7 @@ The following shows basic folder structure.
   <td> 4013.00 ± 0.00 </td>
   <td> 6931.00 ± 0.00 </td>
 </tr>
-<tr>
+<tr align='center'>
   <td rowspan="3"> 1080 Ti - AMP </td>
   <td> Accuracy (%) </td>
   <td> 41.11 ± 1.19 </td>
@@ -105,7 +108,7 @@ The following shows basic folder structure.
   <td> 63.31 ± 1.92 </td>
   <td> 63.41 ± 3.75 </td>
 </tr>
-<tr>
+<tr align='center'>
   <td> Time (sec) </td>
   <td> 6.32 ± 0.70 </td>
   <td> 10.70 ± 1.11 </td>
@@ -113,7 +116,7 @@ The following shows basic folder structure.
   <td> 36.15 ± 3.01 </td>
   <td> 72.64 ± 5.11 </td>
 </tr>
-<tr>
+<tr align='center'>
   <td> Memory (Mb) </td>
   <td> 1941.00 ± 317.97 </td>
   <td> 1907.00 ± 179.63 </td>
@@ -121,7 +124,7 @@ The following shows basic folder structure.
   <td> 4073.00 ± 0.00 </td>
   <td> 7087.00 ± 0.00 </td>
 </tr>
-<tr>
+<tr align='center'>
   <td rowspan="3"> TITAN X - FP32 </td>
   <td> Accuracy (%) </td>
   <td> 42.90 ± 2.42 </td>
@@ -130,7 +133,7 @@ The following shows basic folder structure.
   <td> 64.22 ± 2.62 </td>
   <td> 63.79 ± 1.62 </td>
 </tr>
-<tr>
+<tr align='center'>
   <td> Time (sec) </td>
   <td> 5.86 ± 0.80 </td>
   <td> 9.59 ± 1.29 </td>
@@ -138,7 +141,7 @@ The following shows basic folder structure.
   <td> 35.62 ± 4.07 </td>
   <td> 66.56 ± 4.62 </td>
 </tr>
-<tr>
+<tr align='center'>
   <td> Memory (Mb) </td>
   <td> 1445.00 ± 0.00 </td>
   <td> 1879.00 ± 0.00 </td>
@@ -146,7 +149,7 @@ The following shows basic folder structure.
   <td> 4439.00 ± 0.00 </td>
   <td> 7695.00 ± 0.00 </td>
 </tr>
-<tr>
+<tr align='center'>
   <td rowspan="3"> TITAN X - FP16 </td>
   <td> Accuracy (%) </td>
   <td> 39.13 ± 3.56 </td>
@@ -155,7 +158,7 @@ The following shows basic folder structure.
   <td> 65.57 ± 2.82 </td>
   <td> 64.08 ± 1.80 </td>
 </tr>
-<tr>
+<tr align='center'>
   <td> Time (sec) </td>
   <td> 5.66 ± 0.97 </td>
   <td> 9.72 ± 1.23 </td>
@@ -163,7 +166,7 @@ The following shows basic folder structure.
   <td> 33.23 ± 3.50 </td>
   <td> 65.86 ± 4.94 </td>
 </tr>
-<tr>
+<tr align='center'>
   <td> Memory (Mb) </td>
   <td> 1361.00 ± 0.00 </td>
   <td> 1807.00 ± 0.00 </td>
@@ -171,7 +174,7 @@ The following shows basic folder structure.
   <td> 3171.00 ± 0.00 </td>
   <td> 5535.00 ± 0.00 </td>
 </tr>
-<tr>
+<tr align='center'>
   <td rowspan="3"> TITAN X - AMP </td>
   <td> Accuracy (%) </td>
   <td> 42.57 ± 1.25 </td>
@@ -180,7 +183,7 @@ The following shows basic folder structure.
   <td> 63.76 ± 4.24 </td>
   <td> 65.14 ± 2.93 </td>
 </tr>
-<tr>
+<tr align='center'>
   <td> Time (sec) </td>
   <td> 7.55 ± 1.03 </td>
   <td> 11.82 ± 1.07 </td>
@@ -188,7 +191,7 @@ The following shows basic folder structure.
   <td> 38.82 ± 3.17 </td>
   <td> 76.54 ± 6.60 </td>
 </tr>
-<tr>
+<tr align='center'>
   <td> Memory (Mb) </td>
   <td> 1729.00 ± 219.51 </td>
   <td> 1999.00 ± 146.97 </td>
@@ -196,7 +199,7 @@ The following shows basic folder structure.
   <td> 3453.00 ± 0.00 </td>
   <td> 5917.00 ± 0.00 </td>
 </tr>
-<tr>
+<tr align='center'>
   <td rowspan="3"> V100 - FP32 </td>
   <td> Accuracy (%) </td>
   <td> 42.56 ± 1.37 </td>
@@ -205,7 +208,7 @@ The following shows basic folder structure.
   <td> 65.26 ± 1.76 </td>
   <td> 63.93 ± 3.69 </td>
 </tr>
-<tr>
+<tr align='center'>
   <td> Time (sec) </td>
   <td> 3.93 ± 0.54 </td>
   <td> 6.90 ± 0.82 </td>
@@ -213,7 +216,7 @@ The following shows basic folder structure.
   <td> 25.11 ± 1.83 </td>
   <td> 49.43 ± 3.46 </td>
 </tr>
-<tr>
+<tr align='center'>
   <td> Memory (Mb) </td>
   <td> 1834.00 ± 0.00 </td>
   <td> 2214.00 ± 0.00 </td>
@@ -221,7 +224,7 @@ The following shows basic folder structure.
   <td> 4674.00 ± 304.00 </td>
   <td> 8534.80 ± 826.40 </td>
 </tr>
-<tr>
+<tr align='center'>
   <td rowspan="3"> V100 - FP16 </td>
   <td> Accuracy (%) </td>
   <td> 43.37 ± 2.13 </td>
@@ -230,7 +233,7 @@ The following shows basic folder structure.
   <td> 64.72 ± 2.37 </td>
   <td> 63.21 ± 1.60 </td>
 </tr>
-<tr>
+<tr align='center'>
   <td> Time (sec) </td>
   <td> 3.28 ± 0.52 </td>
   <td> 5.95 ± 1.03 </td>
@@ -238,7 +241,7 @@ The following shows basic folder structure.
   <td> 19.65 ± 1.95 </td>
   <td> 37.32 ± 3.73 </td>
 </tr>
-<tr>
+<tr align='center'>
   <td> Memory (Mb) </td>
   <td> 1777.20 ± 25.60 </td>
   <td> 2040.00 ± 0.00 </td>
@@ -246,7 +249,7 @@ The following shows basic folder structure.
   <td> 3394.00 ± 0.00 </td>
   <td> 4748.00 ± 0.00 </td>
 </tr>
-<tr>
+<tr align='center'>
   <td rowspan="3"> V100 - AMP </td>
   <td> Accracy (%) </td>
   <td> 42.39 ± 2.35 </td>
@@ -255,7 +258,7 @@ The following shows basic folder structure.
   <td> 65.05 ± 3.29 </td>
   <td> 61.67 ± 3.13 </td>
 </tr>
-<tr>
+<tr align='center'>
   <td> Time (sec) </td>
   <td> 4.27 ± 0.54 </td>
   <td> 7.18 ± 0.90 </td>
@@ -263,7 +266,7 @@ The following shows basic folder structure.
   <td> 23.99 ± 2.29 </td>
   <td> 45.68 ± 3.77 </td>
 </tr>
-<tr>
+<tr align='center'>
   <td> Memory (Mb) </td>
   <td> 2174.80 ± 211.74 </td>
   <td> 2274.00 ± 172.15 </td>
@@ -279,15 +282,15 @@ The following shows basic folder structure.
   <td> Time </td>
   <td> Memory </td>
 </tr>
-<tr>
+<tr align='center'>
   <td> <img src = 'assets/CIFAR - Time.png'> </td>
   <td> <img src = 'assets/CIFAR - Memory.png'> </td>
 </tr>
-<tr>
+<tr align='center'>
   <td> Time with std </td>
   <td> Memory with std </td>
 </tr>
-<tr>
+<tr align='center'>
   <td> <img src = 'assets/CIFAR - Time (std).png'> </td>
   <td> <img src = 'assets/CIFAR - Memory (std).png'> </td>
 </tr>
