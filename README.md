@@ -28,6 +28,7 @@ The following shows basic folder structure.
  * Method: FP32 (float32), FP16 (float16; half tensor), AMP (Automatic Mixed Precision)
  * GPU: GTX 1080 Ti, GTX TITAN X, Tesla V100
  * Batch size: 128, 256, 512, 1024, 2048
+ * All random seeds are fixed
  * Result: The mean and std of 5 times (each 100 iterations)
  * Ubuntu 16.04
  * Python 3
