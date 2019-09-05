@@ -5,13 +5,16 @@ from torchvision.transforms import transforms
 from VGG16 import VGG16
 from utils import get_gpu_memory_map
 from torch.utils.data import DataLoader
+from apex import amp
 from apex.fp16_utils import *
+
 
 parser = argparse.ArgumentParser()
 parser.add_argument('--GPU', type=str, default='gpu_name')
 parser.add_argument('--mode', type=str, default='FP32', choices=['FP32', 'FP16', 'amp'])
 parser.add_argument('--batch_size', type=int, default=128)
 parser.add_argument('--iteration', type=int, default=100)
+parser.add_argument('--opt_level', type=str, default="O1", help='What type of half precision to use.')
 args = parser.parse_args()
 
 print('------------ Options -------------')
@@ -25,9 +28,6 @@ np.random.seed(seed)
 torch.manual_seed(seed)
 torch.cuda.manual_seed_all(seed)
 torch.backends.cudnn.benchmark = True
-if args.mode == 'amp':
-    from apex import amp
-    amp_handle = amp.init()
 
 transform = transforms.Compose([
     transforms.ToTensor(),
@@ -50,6 +50,9 @@ for i in range(5):
     if args.mode == 'FP16':
         model = network_to_half(model)
         optimizer = FP16_Optimizer(optimizer, static_loss_scale=128)
+    elif args.mode == 'amp':
+        model, optimizer = amp.initialize(model, optimizer, opt_level=args.opt_level)
+
     ll = []
     iteration = 0
     start_time = time.time()
@@ -67,9 +70,10 @@ for i in range(5):
                 loss.backward()
             elif args.mode == 'FP16':
                 optimizer.backward(loss)
-            else:
-                with amp_handle.scale_loss(loss, optimizer) as scaled_loss:
+            else:  
+                with amp.scale_loss(loss, optimizer) as scaled_loss:
                     scaled_loss.backward()
+
             optimizer.step()
             ll.append(loss.item())
             _, pred = torch.max(y_pred.data, 1)
